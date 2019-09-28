@@ -1,0 +1,190 @@
+2019-09-28 18:37:42,797 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-28 18:37:44,030 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-28 18:37:44,674 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-28 18:37:44,682 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-28 18:37:44,683 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-28 18:37:44,683 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-28 18:37:45,895 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-28 18:37:45,955 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-28 18:37:46,084 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 1.3179503593955677
+
+2019-09-28 18:37:46,540 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.40043392521190346
+
+2019-09-28 18:37:46,796 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.2754504652514287
+
+2019-09-28 18:37:47,027 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.13453656673661757
+
+2019-09-28 18:37:47,242 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.09084270957633053
+
+2019-09-28 18:37:47,473 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.07332673569505081
+
+2019-09-28 18:37:47,701 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.0636328878862616
+
+2019-09-28 18:37:47,923 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.05731584458406322
+
+2019-09-28 18:37:48,174 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.052786889196368564
+
+2019-09-28 18:37:48,408 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.0493331263744321
+
+2019-09-28 18:37:48,911 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    3
+ Accuracy:        0.9811
+ Precision:       0.9804
+ Recall:          0.9848
+ F1 Score:        0.9821
+Precision, recall & F1: macro-averaged (equally weighted avg. of 3 classes)
+
+
+=========================Confusion Matrix=========================
+  0  1  2
+----------
+ 15  0  0 | 0 = 0
+  0 16  0 | 1 = 1
+  0  1 21 | 2 = 2
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
+2019-09-28 18:48:39,302 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-28 18:48:40,360 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-28 18:48:40,973 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-28 18:48:40,980 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-28 18:48:40,980 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-28 18:48:40,980 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-28 18:48:42,130 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-28 18:48:42,181 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-28 18:48:42,250 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 1.3249395140146076
+
+2019-09-28 18:48:42,616 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.40266719983083044
+
+2019-09-28 18:48:42,847 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.2839274961196123
+
+2019-09-28 18:48:43,051 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.13711072496415347
+
+2019-09-28 18:48:43,242 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.09334967136855137
+
+2019-09-28 18:48:43,466 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.07547927261557544
+
+2019-09-28 18:48:43,683 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.06543137463882055
+
+2019-09-28 18:48:43,883 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.05884921260973175
+
+2019-09-28 18:48:44,063 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.05410954880400005
+
+2019-09-28 18:48:44,247 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.05048012559634608
+
+2019-09-28 18:48:44,665 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    3
+ Accuracy:        0.9811
+ Precision:       0.9815
+ Recall:          0.9833
+ F1 Score:        0.9819
+Precision, recall & F1: macro-averaged (equally weighted avg. of 3 classes)
+
+
+=========================Confusion Matrix=========================
+  0  1  2
+----------
+ 16  0  0 | 0 = 0
+  0 17  0 | 1 = 1
+  0  1 19 | 2 = 2
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
