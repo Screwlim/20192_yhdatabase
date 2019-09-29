@@ -48,7 +48,7 @@ import java.io.File;
 /**
  * @author Adam Gibson
  */
-public class FirstTest {
+public class V2 {
 
     private static Logger log = LoggerFactory.getLogger(CSVExample.class);
 
@@ -61,17 +61,17 @@ public class FirstTest {
 
         RecordReader recordReader = new CSVRecordReader(numLinesToSkip,delimiter);
 
-        recordReader.initialize(new FileSplit(new ClassPathResource("data1.txt").getFile()));
+        recordReader.initialize(new FileSplit(new ClassPathResource("zz.txt").getFile()));
 
         //Second: the RecordReaderDataSetIterator handles conversion to DataSet objects, ready for use in neural network
-        int labelIndex = 21; // dateset column 수
-        int numClasses = 4; // dataset label 수
+        int labelIndex = 39; // dateset column 수
+        int numClasses = 2; // dataset label 수
         int batchSize = 10000;
 
         DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader,batchSize,labelIndex,numClasses);
         DataSet allData = iterator.next();
         allData.shuffle();
-        SplitTestAndTrain testAndTrain = allData.splitTestAndTrain(0.7);  //Use 65% of data for training
+        SplitTestAndTrain testAndTrain = allData.splitTestAndTrain(0.8);  //Use 65% of data for training
 
         DataSet trainingData = testAndTrain.getTrain();
         DataSet testData = testAndTrain.getTest();
@@ -83,8 +83,8 @@ public class FirstTest {
         normalizer.transform(testData);         //Apply normalization to the test data. This is using statistics calculated from the *training* set
 
 
-        final int numInputs = 21;
-        int outputNum = 4;
+        final int numInputs = 39;
+        int outputNum = 2;
         long seed = 6;
 
 
@@ -96,7 +96,7 @@ public class FirstTest {
                 .updater(new Sgd(0.1))
                 .l2(1e-4)
                 .list()
-                    .layer(new DenseLayer.Builder().nIn(numInputs).nOut(19)
+                .layer(new DenseLayer.Builder().nIn(numInputs).nOut(19)
                         .build())
                 .layer(new DenseLayer.Builder().nIn(19).nOut(17)
                         .build())
@@ -124,7 +124,7 @@ public class FirstTest {
         model.init();
         model.setListeners(new ScoreIterationListener(100));
 
-        for(int i=0; i<8000; i++ ) {
+        for(int i=0; i<1000; i++ ) {
             model.fit(trainingData);
         }
 
