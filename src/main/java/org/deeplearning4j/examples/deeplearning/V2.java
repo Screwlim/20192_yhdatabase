@@ -71,7 +71,7 @@ public class V2 {
         DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader,batchSize,labelIndex,numClasses);
         DataSet allData = iterator.next();
         allData.shuffle();
-        SplitTestAndTrain testAndTrain = allData.splitTestAndTrain(0.8);  //Use 65% of data for training
+        SplitTestAndTrain testAndTrain = allData.splitTestAndTrain(0.6);  //Use 65% of data for training
 
         DataSet trainingData = testAndTrain.getTrain();
         DataSet testData = testAndTrain.getTest();
@@ -113,7 +113,7 @@ public class V2 {
                 .layer(new DenseLayer.Builder().nIn(7).nOut(5)
                         .build())
                 .layer(new DenseLayer.Builder().nIn(5).nOut(4)
-                        .build())
+                .build())
                 .layer( new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
                         .activation(Activation.SOFTMAX)
                         .nIn(4).nOut(outputNum).build())

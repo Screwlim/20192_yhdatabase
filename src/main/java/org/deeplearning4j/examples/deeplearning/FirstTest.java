@@ -71,7 +71,7 @@ public class FirstTest {
         DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader,batchSize,labelIndex,numClasses);
         DataSet allData = iterator.next();
         allData.shuffle();
-        SplitTestAndTrain testAndTrain = allData.splitTestAndTrain(0.7);  //Use 65% of data for training
+        SplitTestAndTrain testAndTrain = allData.splitTestAndTrain(0.65);  //Use 65% of data for training
 
         DataSet trainingData = testAndTrain.getTrain();
         DataSet testData = testAndTrain.getTest();
@@ -124,7 +124,7 @@ public class FirstTest {
         model.init();
         model.setListeners(new ScoreIterationListener(100));
 
-        for(int i=0; i<8000; i++ ) {
+        for(int i=0; i<500; i++ ) {
             model.fit(trainingData);
         }
 
@@ -141,6 +141,5 @@ public class FirstTest {
             log.info(i + " actual " + actual + "predicted " + predicted);
         }*/
     }
-
 }
 

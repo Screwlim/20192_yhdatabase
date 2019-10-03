@@ -10476,3 +10476,1107 @@ Classes excluded from average recall: [2, 3]
 Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
 ==================================================================
 
+2019-09-30 13:25:51,664 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 13:25:53,121 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 13:25:53,790 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 13:25:53,797 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 13:25:53,797 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 13:25:53,797 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 13:25:55,326 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 13:25:55,393 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 13:25:55,622 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7519455154202077
+
+2019-09-30 13:26:02,404 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.14552171165458036
+
+2019-09-30 13:26:09,064 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.13004357878195733
+
+2019-09-30 13:26:15,544 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.09118114913038784
+
+2019-09-30 13:26:22,641 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.08676787320123107
+
+2019-09-30 13:26:29,775 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.08422514743134361
+
+2019-09-30 13:26:36,935 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.08241989588027863
+
+2019-09-30 13:26:44,007 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.08072967744437855
+
+2019-09-30 13:26:51,130 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.07810616578740352
+
+2019-09-30 13:26:58,205 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.07680839622717739
+
+2019-09-30 13:27:05,775 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    4
+ Accuracy:        0.9760
+ Precision:       0.9778	(2 classes excluded from average)
+ Recall:          0.9746	(2 classes excluded from average)
+ F1 Score:        0.9758	(2 classes excluded from average)
+Precision, recall & F1: macro-averaged (equally weighted avg. of 4 classes)
+
+Warning: 2 classes were never predicted by the model and were excluded from average precision
+Classes excluded from average precision: [2, 3]
+Warning: 2 classes were never predicted by the model and were excluded from average recall
+Classes excluded from average recall: [2, 3]
+
+=========================Confusion Matrix=========================
+    0    1    2    3
+---------------------
+ 1063    5    0    0 | 0 = 0
+   43  889    0    0 | 1 = 1
+    0    0    0    0 | 2 = 2
+    0    0    0    0 | 3 = 3
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
+2019-09-30 13:29:02,282 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 13:29:03,618 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 13:29:04,311 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 13:29:04,318 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 13:29:04,318 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 13:29:04,318 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 13:29:05,778 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 13:29:05,831 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 13:29:05,992 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7512526646715098
+
+2019-09-30 13:29:11,405 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.1465187541141705
+
+2019-09-30 13:29:16,740 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.1297325883576839
+
+2019-09-30 13:29:21,845 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.12337030429005058
+
+2019-09-30 13:29:27,076 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.08759359874367063
+
+2019-09-30 13:29:32,677 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.0851301269888856
+
+2019-09-30 13:29:38,193 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.08362625522529352
+
+2019-09-30 13:29:43,677 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.08240024819125687
+
+2019-09-30 13:29:49,202 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.08141186154657508
+
+2019-09-30 13:29:54,717 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.08061005437821009
+
+2019-09-30 13:30:01,073 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    4
+ Accuracy:        0.9782
+ Precision:       0.9796	(2 classes excluded from average)
+ Recall:          0.9770	(2 classes excluded from average)
+ F1 Score:        0.9781	(2 classes excluded from average)
+Precision, recall & F1: macro-averaged (equally weighted avg. of 4 classes)
+
+Warning: 2 classes were never predicted by the model and were excluded from average precision
+Classes excluded from average precision: [2, 3]
+Warning: 2 classes were never predicted by the model and were excluded from average recall
+Classes excluded from average recall: [2, 3]
+
+=========================Confusion Matrix=========================
+    0    1    2    3
+---------------------
+ 2127   12    0    0 | 0 = 0
+   75 1786    0    0 | 1 = 1
+    0    0    0    0 | 2 = 2
+    0    0    0    0 | 3 = 3
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
+2019-09-30 14:16:34,021 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 14:16:35,669 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 14:16:36,560 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 14:16:36,567 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 14:16:36,568 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 14:16:36,568 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 14:16:38,149 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 14:16:38,215 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 14:16:38,383 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 1.4596116460757742
+
+2019-09-30 14:16:40,729 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.6843197891875692
+
+2019-09-30 14:16:42,791 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.5188006103026152
+
+2019-09-30 14:16:44,671 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.44042084786243024
+
+2019-09-30 14:16:46,590 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.4580575527540215
+
+2019-09-30 14:16:48,612 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    4
+ Accuracy:        0.8638
+ Precision:       0.8937
+ Recall:          0.9170
+ F1 Score:        0.9005
+Precision, recall & F1: macro-averaged (equally weighted avg. of 4 classes)
+
+
+=========================Confusion Matrix=========================
+   0   1   2   3
+-----------------
+ 119   0   3  32 | 0 = 0
+   0  37   0   0 | 1 = 1
+   0   0  46   0 | 2 = 2
+   9   0   0  77 | 3 = 3
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
+2019-09-30 14:17:13,521 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 14:17:15,107 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 14:17:15,896 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 14:17:15,902 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 14:17:15,903 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 14:17:15,903 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 14:17:17,554 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 14:17:17,613 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 14:17:17,754 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 1.465064478488052
+
+2019-09-30 14:17:19,945 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.6807810405673996
+
+2019-09-30 14:17:22,104 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.5054997466423446
+
+2019-09-30 14:17:24,108 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.4587615263669011
+
+2019-09-30 14:17:26,176 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.35024301632221755
+
+2019-09-30 14:17:28,276 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    4
+ Accuracy:        0.8806
+ Precision:       0.9057
+ Recall:          0.9249
+ F1 Score:        0.9102
+Precision, recall & F1: macro-averaged (equally weighted avg. of 4 classes)
+
+
+=========================Confusion Matrix=========================
+   0   1   2   3
+-----------------
+ 120   0   6  32 | 0 = 0
+   0  46   0   0 | 1 = 1
+   0   0  56   0 | 2 = 2
+   7   0   0 110 | 3 = 3
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
+2019-09-30 22:06:34,374 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 22:06:36,185 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 22:06:37,011 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 22:06:37,019 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 22:06:37,019 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 22:06:37,019 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 22:06:38,808 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 22:06:38,881 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 22:06:39,107 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7389579124711095
+
+2019-09-30 22:06:46,068 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.11048309913812156
+
+2019-09-30 22:06:53,002 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.09232324640293654
+
+2019-09-30 22:07:00,788 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.0792389833798508
+
+2019-09-30 22:07:08,675 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.07469426799952776
+
+2019-09-30 22:07:17,373 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.07372098197519304
+
+2019-09-30 22:07:24,208 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.07176503646100013
+
+2019-09-30 22:07:30,919 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.07034279672090774
+
+2019-09-30 22:07:37,796 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.06917616716101203
+
+2019-09-30 22:07:45,006 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.06815438401487481
+
+2019-09-30 22:07:52,360 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    4
+ Accuracy:        0.9768
+ Precision:       0.9776	(2 classes excluded from average)
+ Recall:          0.9761	(2 classes excluded from average)
+ F1 Score:        0.9767	(2 classes excluded from average)
+Precision, recall & F1: macro-averaged (equally weighted avg. of 4 classes)
+
+Warning: 2 classes were never predicted by the model and were excluded from average precision
+Classes excluded from average precision: [2, 3]
+Warning: 2 classes were never predicted by the model and were excluded from average recall
+Classes excluded from average recall: [2, 3]
+
+=========================Confusion Matrix=========================
+    0    1    2    3
+---------------------
+ 2067   19    0    0 | 0 = 0
+   74 1840    0    0 | 1 = 1
+    0    0    0    0 | 2 = 2
+    0    0    0    0 | 3 = 3
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
+2019-09-30 22:34:17,681 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 22:34:18,690 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 22:34:19,328 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 22:34:19,334 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 22:34:19,335 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 22:34:19,335 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 22:34:20,777 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 22:34:20,829 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 22:34:20,998 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7390842959346513
+
+2019-09-30 22:34:26,061 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.12088222789666757
+
+2019-09-30 22:34:31,555 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.09812580891924859
+
+2019-09-30 22:34:37,136 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.08335855947379524
+
+2019-09-30 22:34:43,673 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.07929691521022593
+
+2019-09-30 22:34:50,455 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.0753287497652192
+
+2019-09-30 22:34:57,904 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.07314250966774116
+
+2019-09-30 22:35:05,899 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.07140807978839692
+
+2019-09-30 22:35:14,448 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.069685405386595
+
+2019-09-30 22:35:22,608 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.06809864554379692
+
+2019-09-30 22:38:02,727 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 22:38:03,701 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 22:38:04,317 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 22:38:04,324 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 22:38:04,324 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 22:38:04,324 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 22:38:05,768 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 22:38:05,825 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 22:38:05,984 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7397687034867346
+
+2019-09-30 22:38:11,036 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.11671763112992167
+
+2019-09-30 22:38:16,193 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.09517826507573884
+
+2019-09-30 22:38:21,468 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.07970308920999675
+
+2019-09-30 22:38:27,280 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.07490771439091434
+
+2019-09-30 22:38:33,695 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.07344014195133447
+
+2019-09-30 22:38:40,378 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.0706345187110879
+
+2019-09-30 22:38:47,817 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.06835509574269269
+
+2019-09-30 22:38:55,835 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.0668094949678962
+
+2019-09-30 22:39:04,343 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.06557097534783485
+
+2019-09-30 22:40:20,009 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 22:40:21,026 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 22:40:21,635 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 22:40:21,642 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 22:40:21,642 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 22:40:21,642 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 22:40:23,097 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 22:40:23,151 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 22:40:23,312 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7383982607784012
+
+2019-09-30 22:40:28,643 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.12293758650128699
+
+2019-09-30 22:40:34,893 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.0938625847917845
+
+2019-09-30 22:40:41,063 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.08483154884055052
+
+2019-09-30 22:40:47,436 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.07999579338085255
+
+2019-09-30 22:40:53,997 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.07995858179766516
+
+2019-09-30 22:41:00,837 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.07768488607794216
+
+2019-09-30 22:41:08,223 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.07604989033156487
+
+2019-09-30 22:41:16,493 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.07403360289289203
+
+2019-09-30 22:41:24,998 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.0706784884362786
+
+2019-09-30 22:41:34,214 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    4
+ Accuracy:        0.9802
+ Precision:       0.9802	(2 classes excluded from average)
+ Recall:          0.9801	(2 classes excluded from average)
+ F1 Score:        0.9801	(2 classes excluded from average)
+Precision, recall & F1: macro-averaged (equally weighted avg. of 4 classes)
+
+Warning: 2 classes were never predicted by the model and were excluded from average precision
+Classes excluded from average precision: [2, 3]
+Warning: 2 classes were never predicted by the model and were excluded from average recall
+Classes excluded from average recall: [2, 3]
+
+=========================Confusion Matrix=========================
+    0    1    2    3
+---------------------
+ 2108   38    0    0 | 0 = 0
+   41 1813    0    0 | 1 = 1
+    0    0    0    0 | 2 = 2
+    0    0    0    0 | 3 = 3
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
+2019-09-30 22:44:19,047 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 22:44:20,058 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 22:44:20,701 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 22:44:20,708 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 22:44:20,708 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 22:44:20,708 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 22:44:22,155 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 22:44:22,208 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 22:44:22,366 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7389243024450679
+
+2019-09-30 22:44:27,513 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.11596913622017516
+
+2019-09-30 22:44:32,844 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.10119883415825318
+
+2019-09-30 22:44:38,370 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.09255466101569912
+
+2019-09-30 22:44:44,883 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.08415371041544226
+
+2019-09-30 22:44:51,710 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.08021014159988525
+
+2019-09-30 22:44:59,320 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.07922246019016616
+
+2019-09-30 22:45:07,701 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.07628463277463564
+
+2019-09-30 22:45:17,487 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.0739902977431787
+
+2019-09-30 22:45:26,067 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.07197692207635094
+
+2019-09-30 22:45:35,424 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    4
+ Accuracy:        0.9815
+ Precision:       0.9815	(2 classes excluded from average)
+ Recall:          0.9813	(2 classes excluded from average)
+ F1 Score:        0.9814	(2 classes excluded from average)
+Precision, recall & F1: macro-averaged (equally weighted avg. of 4 classes)
+
+Warning: 2 classes were never predicted by the model and were excluded from average precision
+Classes excluded from average precision: [2, 3]
+Warning: 2 classes were never predicted by the model and were excluded from average recall
+Classes excluded from average recall: [2, 3]
+
+=========================Confusion Matrix=========================
+    0    1    2    3
+---------------------
+ 2087   34    0    0 | 0 = 0
+   40 1839    0    0 | 1 = 1
+    0    0    0    0 | 2 = 2
+    0    0    0    0 | 3 = 3
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
+2019-09-30 23:07:57,366 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 23:07:58,304 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 23:07:58,916 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 23:07:58,922 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 23:07:58,922 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 23:07:58,922 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 23:08:00,426 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 23:08:00,484 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 23:08:00,659 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7398736025752762
+
+2019-09-30 23:08:05,847 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.11400889361094135
+
+2019-09-30 23:08:11,168 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.09137166173309974
+
+2019-09-30 23:08:16,568 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.08358238539074127
+
+2019-09-30 23:08:22,687 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.07830855039304714
+
+2019-09-30 23:08:29,318 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.07491545745308996
+
+2019-09-30 23:08:36,119 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.07210627734937655
+
+2019-09-30 23:08:43,469 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.07022261545333248
+
+2019-09-30 23:08:51,657 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.06858175256245963
+
+2019-09-30 23:09:00,099 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.06692785214847717
+
+2019-09-30 23:09:22,526 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 23:09:23,728 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 23:09:24,480 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 23:09:24,487 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 23:09:24,487 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 23:09:24,487 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 23:09:25,975 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 23:09:26,035 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 23:09:26,223 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7399705264034012
+
+2019-09-30 23:09:33,074 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 100 is 0.11714437644234726
+
+2019-09-30 23:09:39,379 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 200 is 0.09216773311984694
+
+2019-09-30 23:09:45,795 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 300 is 0.08092981075807656
+
+2019-09-30 23:09:52,403 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 400 is 0.07632227133301091
+
+2019-09-30 23:09:59,551 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 500 is 0.07501959008418055
+
+2019-09-30 23:10:07,056 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 600 is 0.07265534928692936
+
+2019-09-30 23:10:15,262 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 700 is 0.07049348682609619
+
+2019-09-30 23:10:23,825 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 800 is 0.06902277736532395
+
+2019-09-30 23:10:32,228 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 900 is 0.0678445486879586
+
+2019-09-30 23:11:01,858 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 23:11:02,733 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 23:11:03,337 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 23:11:03,343 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 23:11:03,343 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 23:11:03,343 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 23:11:04,805 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 23:11:04,857 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 23:11:05,012 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7391161969763179
+
+2019-09-30 23:11:11,378 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    4
+ Accuracy:        0.9683
+ Precision:       0.9688	(2 classes excluded from average)
+ Recall:          0.9678	(2 classes excluded from average)
+ F1 Score:        0.9682	(2 classes excluded from average)
+Precision, recall & F1: macro-averaged (equally weighted avg. of 4 classes)
+
+Warning: 2 classes were never predicted by the model and were excluded from average precision
+Classes excluded from average precision: [2, 3]
+Warning: 2 classes were never predicted by the model and were excluded from average recall
+Classes excluded from average recall: [2, 3]
+
+=========================Confusion Matrix=========================
+    0    1    2    3
+---------------------
+ 2032   41    0    0 | 0 = 0
+   86 1841    0    0 | 1 = 1
+    0    0    0    0 | 2 = 2
+    0    0    0    0 | 3 = 3
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
+2019-09-30 23:11:55,811 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 23:11:56,729 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 23:11:57,354 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 23:11:57,361 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 23:11:57,361 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 23:11:57,361 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 23:11:58,797 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 23:11:58,850 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 23:11:59,004 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7393895530961095
+
+2019-09-30 23:12:31,683 - [INFO] - from org.nd4j.linalg.factory.Nd4jBackend in main
+                
+Loaded [CpuBackend] backend
+
+2019-09-30 23:12:32,631 - [INFO] - from org.nd4j.nativeblas.NativeOpsHolder in main
+                
+Number of threads used for OpenMP: 4
+
+2019-09-30 23:12:33,226 - [INFO] - from org.nd4j.nativeblas.Nd4jBlas in main
+                
+Number of threads used for OpenMP BLAS: 4
+
+2019-09-30 23:12:33,232 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Backend used: [CPU]; OS: [Windows 10]
+
+2019-09-30 23:12:33,232 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Cores: [8]; Memory: [1.8GB];
+
+2019-09-30 23:12:33,232 - [INFO] - from org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner in main
+                
+Blas vendor: [MKL]
+
+2019-09-30 23:12:34,698 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+Build model....
+
+2019-09-30 23:12:34,752 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+
+2019-09-30 23:12:34,919 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is 0.7387052269242346
+
+2019-09-30 23:12:42,151 - [INFO] - from org.deeplearning4j.examples.dataexamples.CSVExample in main
+                
+
+
+========================Evaluation Metrics========================
+ # of classes:    4
+ Accuracy:        0.9702
+ Precision:       0.9706	(2 classes excluded from average)
+ Recall:          0.9699	(2 classes excluded from average)
+ F1 Score:        0.9702	(2 classes excluded from average)
+Precision, recall & F1: macro-averaged (equally weighted avg. of 4 classes)
+
+Warning: 2 classes were never predicted by the model and were excluded from average precision
+Classes excluded from average precision: [2, 3]
+Warning: 2 classes were never predicted by the model and were excluded from average recall
+Classes excluded from average recall: [2, 3]
+
+=========================Confusion Matrix=========================
+    0    1    2    3
+---------------------
+ 2029   44    0    0 | 0 = 0
+   75 1852    0    0 | 1 = 1
+    0    0    0    0 | 2 = 2
+    0    0    0    0 | 3 = 3
+
+Confusion matrix format: Actual (rowClass) predicted as (columnClass) N times
+==================================================================
+
