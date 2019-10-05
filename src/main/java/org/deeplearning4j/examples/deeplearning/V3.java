@@ -51,7 +51,7 @@ import java.io.FileOutputStream;
  */
 public class V3 {
 
-    private static Logger log = LoggerFactory.getLogger(CSVExample.class);
+    private static Logger log = LoggerFactory.getLogger(V3.class);
 
     public static void main(String[] args) throws  Exception {
 
@@ -60,17 +60,17 @@ public class V3 {
 
 
         RecordReader recordReader = new CSVRecordReader(numLinesToSkip,delimiter);
-        recordReader.initialize(new FileSplit(new ClassPathResource("train03.txt").getFile()));
+        recordReader.initialize(new FileSplit(new ClassPathResource("train0203.txt").getFile()));
 
         //Second: the RecordReaderDataSetIterator handles conversion to DataSet objects, ready for use in neural network
         int labelIndex = 41; // dateset column 수
         int numClasses = 2; // dataset label 수
-        int batchSize = 10000;
+        int batchSize = 200000;
 
         DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader,batchSize,labelIndex,numClasses);
         DataSet allData = iterator.next();
         allData.shuffle();
-        SplitTestAndTrain testAndTrain = allData.splitTestAndTrain(0.6);
+        SplitTestAndTrain testAndTrain = allData.splitTestAndTrain(0.7);
 
         DataSet trainingData = testAndTrain.getTrain();
         DataSet testData = testAndTrain.getTest();
@@ -95,33 +95,19 @@ public class V3 {
                 .updater(new Sgd(0.1))
                 .l2(1e-4)
                 .list()
-                .layer(new DenseLayer.Builder().nIn(numInputs).nOut(19)
+                .layer(new DenseLayer.Builder().nIn(numInputs).nOut(20)
                         .build())
-                .layer(new DenseLayer.Builder().nIn(19).nOut(17)
+                .layer(new DenseLayer.Builder().nIn(20).nOut(10)
                         .build())
-                .layer(new DenseLayer.Builder().nIn(17).nOut(15)
-                        .build())
-                .layer(new DenseLayer.Builder().nIn(15).nOut(13)
-                        .build())
-                .layer(new DenseLayer.Builder().nIn(13).nOut(11)
-                        .build())
-                .layer(new DenseLayer.Builder().nIn(11).nOut(9)
-                        .build())
-                .layer(new DenseLayer.Builder().nIn(9).nOut(7)
-                        .build())
-                .layer(new DenseLayer.Builder().nIn(7).nOut(5)
-                        .build())
-                .layer(new DenseLayer.Builder().nIn(5).nOut(4)
-                .build())
                 .layer( new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
                         .activation(Activation.SOFTMAX)
-                        .nIn(4).nOut(outputNum).build())
+                        .nIn(10).nOut(outputNum).build())
                 .build();
 
         //run the model
         MultiLayerNetwork model = new MultiLayerNetwork(conf);
         model.init();
-        model.setListeners(new ScoreIterationListener(100));
+        model.setListeners(new ScoreIterationListener(1));
 
         for(int i=0; i<100; i++ ) {
             model.fit(trainingData);
@@ -129,10 +115,11 @@ public class V3 {
 
         //BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream("C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\model.param"));
 
-        ModelSerializer .writeModel(model, "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\model", true);
-
+        //ModelSerializer .writeModel(model, "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\model.param", true);
+        //log.info("done.");
         //evaluate the model on the test set
-        Evaluation eval = new Evaluation(4);
+
+        Evaluation eval = new Evaluation(2);
         INDArray output = model.output(testData.getFeatures());
         eval.eval(testData.getLabels(), output);
         log.info(eval.stats());
