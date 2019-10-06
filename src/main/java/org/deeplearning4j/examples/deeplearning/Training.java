@@ -8,6 +8,7 @@ import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.deeplearning4j.eval.Evaluation;
 import org.deeplearning4j.examples.dataexamples.CSVExample;
 import org.deeplearning4j.examples.download.DownloaderUtility;
+import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
 import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
 import org.deeplearning4j.nn.conf.layers.DenseLayer;
@@ -29,6 +30,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.util.Scanner;
 
 public class Training {
 
@@ -36,24 +38,29 @@ public class Training {
 
     public static void main(String[] args) throws  Exception {
 
+        Scanner scan = new Scanner(System.in);
+
         int numLinesToSkip = 0;
         char delimiter = ',';
 
+        System.out.print("training file name : ");
+        String fileName = scan.nextLine();
+        fileName = fileName + ".txt";
+
         RecordReader recordReader = new CSVRecordReader(numLinesToSkip,delimiter);
-        recordReader.initialize(new FileSplit(new ClassPathResource("train0203.txt").getFile()));
+        recordReader.initialize(new FileSplit(new ClassPathResource(fileName).getFile()));
 
         int labelIndex = 41;
         int numClasses = 2;
-        int batchSize = 2000000;
+        int batchSize = 200000;
 
         DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader,batchSize,labelIndex,numClasses);
         DataSet allData = iterator.next();
         allData.shuffle();
 
-        //We need to normalize our data. We'll use NormalizeStandardize (which gives us mean 0, unit variance):
         DataNormalization normalizer = new NormalizerStandardize();
-        normalizer.fit(allData);           //Collect the statistics (mean/stdev) from the training data. This does not modify the input data
-        normalizer.transform(allData);     //Apply normalization to the training data
+        normalizer.fit(allData);
+        normalizer.transform(allData);
 
         final int numInputs = 41;
         int outputNum = 2;
@@ -62,32 +69,38 @@ public class Training {
         log.info("Build model.....");
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(seed)
+                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
                 .activation(Activation.TANH)
                 .weightInit(WeightInit.XAVIER)
                 .updater(new Sgd(0.1))
                 .l2(1e-4)
                 .list()
-                .layer(new DenseLayer.Builder().nIn(numInputs).nOut(3)
+                .layer(new DenseLayer.Builder().nIn(numInputs).nOut(30)
                         .build())
-                .layer(new DenseLayer.Builder().nIn(3).nOut(3)
+                .layer(new DenseLayer.Builder().nIn(30).nOut(10)
                         .build())
                 .layer( new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
                         .activation(Activation.SOFTMAX)
-                        .nIn(3).nOut(outputNum).build())
+                        .nIn(10).nOut(outputNum).build())
                 .build();
 
         MultiLayerNetwork model = new MultiLayerNetwork(conf);
         model.init();
-        model.setListeners(new ScoreIterationListener(1));
+        model.setListeners(new ScoreIterationListener(10));
 
-        log.info("tarin model.....");
+        log.info("Train model.....");
         for(int i=0; i<100; i++ ) {
             model.fit(allData);
         }
 
-        log.info("save model.....");
-        ModelSerializer.writeModel(model, "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\model.zip", true);
+        log.info("Save model.....");
+        System.out.print("model name : ");
+        String modelName = scan.nextLine();
+        modelName = modelName + ".zip";
+        String path = "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\";
+        path = path + modelName;
+        ModelSerializer.writeModel(model, path, true);
 
-        log.info("complete.");
+        log.info("Complete.");
     }
 }

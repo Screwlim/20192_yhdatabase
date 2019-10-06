@@ -30,6 +30,7 @@ import org.slf4j.LoggerFactory;
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Scanner;
 
 
 public class Testing {
@@ -38,11 +39,17 @@ public class Testing {
 
     public static void main(String[] args) throws  Exception {
 
+        Scanner scan = new Scanner(System.in);
+
         int numLinesToSkip = 0;
         char delimiter = ',';
 
+        System.out.print("test file name : ");
+        String fileName = scan.nextLine();
+        fileName = fileName + ".txt";
+
         RecordReader recordReader = new CSVRecordReader(numLinesToSkip,delimiter);
-        recordReader.initialize(new FileSplit(new ClassPathResource("test03.txt").getFile()));
+        recordReader.initialize(new FileSplit(new ClassPathResource(fileName).getFile()));
 
         int labelIndex = 41;
         int numClasses = 2;
@@ -56,9 +63,13 @@ public class Testing {
         normalizer.transform(allData);
 
 
+        System.out.print("model name : ");
+        String modelName = scan.nextLine();
+        modelName = modelName + ".zip";
+        String path = "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\";
+        path = path + modelName;
 
-        MultiLayerNetwork model = ModelSerializer.restoreMultiLayerNetwork(
-                "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\model.zip");
+        MultiLayerNetwork model = ModelSerializer.restoreMultiLayerNetwork(path);
 
         Evaluation eval = new Evaluation(2);
         INDArray output = model.output(allData.getFeatures());
