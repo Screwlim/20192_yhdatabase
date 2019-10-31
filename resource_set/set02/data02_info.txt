@@ -1,4 +1,4 @@
-01 Duration			Length of time duration of the connection
+﻿01 Duration			Length of time duration of the connection
 				연결 시간
 
 02 Protocol Type			Protocol used in the connection
@@ -9,6 +9,18 @@
 
 04 Flag				Status of the connection – Normal or Error
 				연결 상태 (Normal, Error)
+				SF: normal establishment, termination + byte counts
+				REJ: connection attempt rejection
+				S0: connection seen, no reply
+				S1: connection established, not terminated
+				S2: connection established, originator seen, no reply from responder
+				S3: connection established, responder seen, no reply from originator
+				RSTO: reset by originator
+				RSTR: reset by responder
+				OTH: no SYN seen
+				RSTOS0: originator SYN >> RST
+				SH: originator SYN >> FIN
+				SHR: responder SYN ACK >> FIN
 
 05 Src Bytes			Number of data bytes transferred from source to destination in single connection
 				한번의 연결 동안 src에서 dest로 전송 된 바이트량
