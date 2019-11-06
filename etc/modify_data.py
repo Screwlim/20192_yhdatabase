@@ -1,8 +1,8 @@
 import csv
 import pandas as pd
 
-f_major = open('Train1.csv', 'r', encoding='utf-8')  # Input 파일 이름
-out_major = open('change_train03.txt', 'w', encoding='utf-8', newline='')  # Output  파일 이름
+f_major = open('Test1.csv', 'r', encoding='utf-8')  # Input 파일 이름
+out_major = open('label_test03.txt', 'w', encoding='utf-8', newline='')  # Output  파일 이름
 rdr_m = csv.reader(f_major)
 wr_m = csv.writer(out_major)
 
@@ -13,6 +13,13 @@ label = ['netbios_dgm','netbios_ssn','netbios_ns','remote_job','http_8001','host
            'systat','telnet','shell','imap4','eco_i','ecr_i','red_i','pop_2','pop_3','login','tim_i','urh_i','urp_i','ntp_u',
            'vmnet','other','whois','time','echo','ldap','link','http','smtp','uucp','auth','nnsp',
            'nntp','name','exec','aol','IRC','X11','bgp','ctf','mtp','rje','ssh','efs','ftp']
+
+DoS = ['back','land','neptune','pod','smurf','teardrop','apache2','udpstorm','processtable','worm']
+Probe = ['satan','ipsweep','nmap','portsweep','mscan','saint']
+R2L = ['guess_passwd','ftp_write','imap','phf','multihop','warezmaster','warezclient','spy','xlock','xsnoop','snmpguess','snmpgetattack','httptunnel','sendmail','named']
+U2R = ['buffer_overflow','loadmodule','rootkit','perl','sqlattack','xterm','ps']
+
+count=[0,0,0,0,0]
 
 
 for line in rdr_m:
@@ -27,11 +34,27 @@ for line in rdr_m:
     for n in range(11):
         if (line[3] == Flag[n]): line[3] = (n+1)
 
-    #if(line[41]=='normal'):
-    #    line[41]=0
-    #else :
-    #    line[41]=1
+    for m in range(10):
+       if(line[41]==DoS[m]): line[41]=1
+    for m in range(6):
+       if(line[41]==Probe[m]): line[41]=2
+    for m in range(15):
+       if(line[41]==R2L[m]): line[41]=3
+    for m in range(7):
+       if(line[41]==U2R[m]): line[41]=4
 
+    if(line[41]=='normal'): line[41]=0
+
+    if(line[41]==0):
+        count[0]= count[0]+1
+    if (line[41] == 1):
+        count[1] = count[1] + 1
+    if (line[41] == 2):
+        count[2] = count[2] + 1
+    if (line[41] == 3):
+        count[3] = count[3] + 1
+    if (line[41] == 4):
+        count[4] = count[4] + 1
 
     wr_m.writerow(line[:42])
 
@@ -42,7 +65,7 @@ for line in rdr_m:
 
 f_major.close()
 
-
+print(count)
 
 #Serv = ['netbios_dgm','netbios_ssn','netbios_ns','http_8001','hostnames','ucp_path','http_2784','iso_tsap',
 #           'csnet_ns','domain_u','ftp_data','http_443','daytime','harvest','discard','netstat','courier','pm_dump',
