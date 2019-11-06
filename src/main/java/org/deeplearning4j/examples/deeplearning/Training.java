@@ -3,6 +3,7 @@ package org.deeplearning4j.examples.deeplearning;
 import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.split.FileSplit;
+import org.deeplearning4j.api.storage.StatsStorage;
 import org.deeplearning4j.arbiter.util.ClassPathResource;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.deeplearning4j.eval.Evaluation;
@@ -16,6 +17,9 @@ import org.deeplearning4j.nn.conf.layers.OutputLayer;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.nn.weights.WeightInit;
 import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
+import org.deeplearning4j.ui.api.UIServer;
+import org.deeplearning4j.ui.stats.StatsListener;
+import org.deeplearning4j.ui.storage.InMemoryStatsStorage;
 import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.api.ndarray.INDArray;
@@ -77,7 +81,9 @@ public class Training {
                 .list()
                 .layer(new DenseLayer.Builder().nIn(numInputs).nOut(30)
                         .build())
-                .layer(new DenseLayer.Builder().nIn(30).nOut(10)
+                .layer(new DenseLayer.Builder().nIn(30).nOut(20)
+                        .build())
+                .layer(new DenseLayer.Builder().nIn(20).nOut(10)
                         .build())
                 .layer( new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
                         .activation(Activation.SOFTMAX)
@@ -93,14 +99,21 @@ public class Training {
             model.fit(allData);
         }
 
-        log.info("Save model.....");
+        UIServer uiServer = UIServer.getInstance();
+        StatsStorage statsStorage = new InMemoryStatsStorage();         //Alternative: new FileStatsStorage(File), for saving and loading later
+        uiServer.attach(statsStorage);
+        model.setListeners(new StatsListener(statsStorage));
+
+
+
+        /*log.info("Save model.....");
         System.out.print("model name : ");
         String modelName = scan.nextLine();
         modelName = modelName + ".zip";
         String path = "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\";
         path = path + modelName;
         ModelSerializer.writeModel(model, path, true);
-
+        */
         log.info("Complete.");
     }
 }

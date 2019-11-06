@@ -88,6 +88,12 @@
             <version>${nd4j.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-ui_2.12</artifactId>
+            <version>1.0.0-beta5</version>
+        </dependency>
+
         <!-- Core DL4J functionality -->
         <dependency>
             <groupId>org.deeplearning4j</groupId>

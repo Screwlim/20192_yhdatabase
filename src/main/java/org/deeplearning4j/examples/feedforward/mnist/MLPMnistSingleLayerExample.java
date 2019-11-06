@@ -98,6 +98,8 @@ public class MLPMnistSingleLayerExample {
         model.fit(mnistTrain, numEpochs);
 
 
+
+
         log.info("Evaluate model....");
         Evaluation eval = model.evaluate(mnistTest);
         log.info(eval.stats());
