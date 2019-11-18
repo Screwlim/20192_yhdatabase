@@ -31,22 +31,22 @@ public class Testing3 {
         int numLinesToSkip = 0;
         char delimiter = ',';
 
-        String fileName = "testing_2label.txt";
+        String fileName = "testing.txt";
 
         RecordReader recordReader = new CSVRecordReader(numLinesToSkip, delimiter);
         recordReader.initialize(new FileSplit(new ClassPathResource(fileName).getFile()));
 
-        int labelIndex = 41;
+        int labelIndex = 28;
         int numClasses = 2;
-        int batchSize = 22544;
+        int batchSize = 500000;
 
         DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader, batchSize, labelIndex, numClasses);
         DataSet allData = iterator.next();
-        allData.shuffle();
+        //allData.shuffle();
 
-        DataNormalization normalizer = new NormalizerStandardize();
-        normalizer.fit(allData);
-        normalizer.transform(allData);
+        //DataNormalization normalizer = new NormalizerStandardize();
+        //normalizer.fit(allData);
+        //normalizer.transform(allData);
 
 
         MultiLayerNetwork model;
@@ -65,6 +65,6 @@ public class Testing3 {
         INDArray output = model.output(allData.getFeatures());
         eval.eval(allData.getLabels(), output);
         log.info(eval.stats());
-
+        //System.out.println("AA" + output);
     }
 }

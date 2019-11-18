@@ -8,6 +8,7 @@ import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.deeplearning4j.eval.Evaluation;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.util.ModelSerializer;
+import org.jfree.data.general.Dataset;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
@@ -23,16 +24,54 @@ public class Classification {
     private static Logger log = LoggerFactory.getLogger(Classification.class);
 
     public static void main(String[] args) throws Exception {
-        BufferedWriter bw_normal = new BufferedWriter(new FileWriter("C:\\20192_yhdatabase\\src\\main\\resources\\noraml.txt", true));
-        BufferedWriter bw_abnormal = new BufferedWriter(new FileWriter("C:\\20192_yhdatabase\\src\\main\\resources\\noraml.txt", true));
 
-        PrintWriter pw_normal = new PrintWriter(bw_normal, true);
-        PrintWriter pw_abnormal = new PrintWriter(bw_abnormal, true);
+        int numLinesToSkip = 0;
+        char delimiter = ',';
 
-        pw_normal.write("hello\n");
-        pw_normal.write("good\n");
+        String fileName = "noLabel.txt";
 
-        pw_normal.flush();
-        pw_normal.close();
+        RecordReader recordReader = new CSVRecordReader(numLinesToSkip, delimiter);
+        recordReader.initialize(new FileSplit(new ClassPathResource(fileName).getFile()));
+
+        int labelIndex = 28;
+        int numClasses = 2;
+        int batchSize = 500000;
+        int nPacket;
+
+        DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader, batchSize);
+        DataSet allData = iterator.next();
+        nPacket = allData.numExamples();
+
+
+        DataNormalization normalizer = new NormalizerStandardize();
+        //normalizer.fit(allData);
+        //normalizer.transform(allData);
+
+        MultiLayerNetwork model;
+
+        String path = "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\1118.zip";
+        model = ModelSerializer.restoreMultiLayerNetwork(path);
+
+        INDArray output = model.output(allData.getFeatures());
+        //allData.getFeatures();
+        //System.out.println(allData.getFeatures().getDouble(25443,1));
+        int i = 0;
+        int nNormal=0, nAbnormal=0;
+        while(i < nPacket)
+        {
+            if(output.getDouble(i, 0) > output.getDouble(i, 1)) // 정상 패킷
+            {
+                System.out.println(i + " : 정상패킷 " + output.getDouble(i, 0) + " " + output.getDouble(i, 1));
+                nNormal++;
+            }
+            else // 이상 패킷
+            {
+                System.out.println(i + " : 이상패킷 " + output.getDouble(i, 0) + " " + output.getDouble(i, 1) + " " + allData.getFeatures().getRow(i));
+                nAbnormal++;
+            }
+
+            i++;
+        }
+        System.out.println("정상패킷 수 : " + nNormal + " 이상패킷 수 : " + nAbnormal);
     }
 }

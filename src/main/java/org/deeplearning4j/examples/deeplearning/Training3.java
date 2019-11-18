@@ -51,25 +51,25 @@ public class Training3 {
         int numLinesToSkip = 0;
         char delimiter = ',';
 
-        String fileName = "training_2label.txt";
+        String fileName = "new.txt";
 
         RecordReader recordReader = new CSVRecordReader(numLinesToSkip, delimiter);
         recordReader.initialize(new FileSplit(new ClassPathResource(fileName).getFile()));
 
-        int labelIndex = 41;
+        int labelIndex = 28;
         int numClasses = 2;
-        int batchSize = 125973;
+        int batchSize = 314908;
 
 
         DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader, batchSize, labelIndex, numClasses);
         DataSet allData = iterator.next();
-        allData.shuffle();
+        //allData.shuffle();
 
         DataNormalization normalizer = new NormalizerStandardize();
-        normalizer.fit(allData);
-        normalizer.transform(allData);
+        //normalizer.fit(allData);
+        //normalizer.transform(allData);
 
-        final int numInputs = 41;
+        final int numInputs = 28;
         int outputNum = 2;
         long seed = 6;
         double learningRate = 0.09;
@@ -83,9 +83,9 @@ public class Training3 {
                 .updater(new Sgd(learningRate))
                 .l2(1e-4)
                 .list()
-                .layer(new DenseLayer.Builder().nIn(numInputs).nOut(30).weightInit(WeightInit.XAVIER).activation(Activation.TANH)
+                .layer(new DenseLayer.Builder().nIn(numInputs).nOut(25).weightInit(WeightInit.XAVIER).activation(Activation.TANH)
                         .build())
-                .layer(new DenseLayer.Builder().nIn(30).nOut(20).weightInit(WeightInit.XAVIER).activation(Activation.TANH)
+                .layer(new DenseLayer.Builder().nIn(25).nOut(20).weightInit(WeightInit.XAVIER).activation(Activation.TANH)
                         .build())
                 .layer(new DenseLayer.Builder().nIn(20).nOut(10).weightInit(WeightInit.XAVIER).activation(Activation.TANH)
                         .build())
