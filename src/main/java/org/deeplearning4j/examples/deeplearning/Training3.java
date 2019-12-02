@@ -51,14 +51,14 @@ public class Training3 {
         int numLinesToSkip = 0;
         char delimiter = ',';
 
-        String fileName = "new.txt";
+        String fileName = "./data/training.txt";
 
         RecordReader recordReader = new CSVRecordReader(numLinesToSkip, delimiter);
         recordReader.initialize(new FileSplit(new ClassPathResource(fileName).getFile()));
 
         int labelIndex = 28;
         int numClasses = 2;
-        int batchSize = 314908;
+        int batchSize = 125973;
 
 
         DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader, batchSize, labelIndex, numClasses);
@@ -117,8 +117,8 @@ public class Training3 {
         System.out.print("model name : ");
         String modelName = scan.nextLine();
         modelName = modelName + ".zip";
-        String path = "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\";
-        path = path + modelName;
+        String path = "./src/main/resources/trainedModel/" + modelName;
+
         ModelSerializer.writeModel(model, path, true);
 
 

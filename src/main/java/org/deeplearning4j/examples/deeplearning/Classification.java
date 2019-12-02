@@ -1,5 +1,6 @@
 package org.deeplearning4j.examples.deeplearning;
 
+import org.apache.commons.io.FileUtils;
 import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.split.FileSplit;
@@ -23,25 +24,53 @@ public class Classification {
 
     private static Logger log = LoggerFactory.getLogger(Classification.class);
 
-    public static void main(String[] args) throws Exception {
+    public static void classification(String fileName) throws Exception {
 
         int numLinesToSkip = 0;
         char delimiter = ',';
 
-        String fileName = "noLabel.txt";
-
         RecordReader recordReader = new CSVRecordReader(numLinesToSkip, delimiter);
-        recordReader.initialize(new FileSplit(new ClassPathResource(fileName).getFile()));
+
+        String temp = fileName + "IP.txt";
+        fileName = fileName + "data.txt";
+
+        File file = new File("./src/main/resources/" + fileName);
+        File file2 = new File("./src/main/resources/" + temp);
+        File ip = new File("./src/main/resources/data/attackIP.txt");
+
+        FileWriter fw = new FileWriter(ip, true);
+
+        String line = new String();
+        if(file.exists())
+        {
+            if(file.length() == 0)
+            {
+                System.out.println("패킷이 0개 캡쳐됨.");
+                return;
+            }
+            else
+            {
+                recordReader.initialize(new FileSplit(file));
+            }
+        }
+        else
+        {
+            System.out.println("xxxxxxx");
+            return;
+        }
+
+
+
+
 
         int labelIndex = 28;
         int numClasses = 2;
-        int batchSize = 500000;
+        int batchSize = 1000000;
         int nPacket;
 
         DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader, batchSize);
         DataSet allData = iterator.next();
         nPacket = allData.numExamples();
-
 
         DataNormalization normalizer = new NormalizerStandardize();
         //normalizer.fit(allData);
@@ -49,7 +78,7 @@ public class Classification {
 
         MultiLayerNetwork model;
 
-        String path = "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\1118.zip";
+        String path = "./src/main/resources/trainedModel/attach.zip";
         model = ModelSerializer.restoreMultiLayerNetwork(path);
 
         INDArray output = model.output(allData.getFeatures());
@@ -68,6 +97,12 @@ public class Classification {
             {
                 System.out.println(i + " : 이상패킷 " + output.getDouble(i, 0) + " " + output.getDouble(i, 1) + " " + allData.getFeatures().getRow(i));
                 nAbnormal++;
+                line = FileUtils.readLines(file2).get(i);
+                //System.out.println("qqqqqqqqqqqqqqqqqqqqqqqqqqqqq" + line);
+
+                // data/attackIP.txt 에서 search 후 해당 IP가 있다면 count++해주고 없다면 맨밑에 line 1 쓴다.
+                fw.write(line + "\n");
+                fw.flush();
             }
 
             i++;

@@ -38,42 +38,8 @@ public class Testing {
     private static Logger log = LoggerFactory.getLogger(Testing.class);
 
     public static void main(String[] args) throws  Exception {
-
-        Scanner scan = new Scanner(System.in);
-
-        int numLinesToSkip = 0;
-        char delimiter = ',';
-
-        System.out.print("test file name : ");
-        String fileName = scan.nextLine();
-        fileName = fileName + ".txt";
-
-        RecordReader recordReader = new CSVRecordReader(numLinesToSkip,delimiter);
-        recordReader.initialize(new FileSplit(new ClassPathResource(fileName).getFile()));
-
-        int labelIndex = 41;
-        int numClasses = 2;
-        int batchSize = 2000000;
-
-        DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader,batchSize,labelIndex,numClasses);
-        DataSet allData = iterator.next();
-
-        DataNormalization normalizer = new NormalizerStandardize();
-        normalizer.fit(allData);
-        normalizer.transform(allData);
-
-
-        System.out.print("model name : ");
-        String modelName = scan.nextLine();
-        modelName = modelName + ".zip";
-        String path = "C:\\20192_yhdatabase\\src\\main\\resources\\trainedModel\\";
-        path = path + modelName;
-
-        MultiLayerNetwork model = ModelSerializer.restoreMultiLayerNetwork(path);
-
-        Evaluation eval = new Evaluation(2);
-        INDArray output = model.output(allData.getFeatures());
-        eval.eval(allData.getLabels(), output);
-        log.info(eval.stats());
+        String a = "1574227267788data.txt";
+        Classification cl = new Classification();
+        cl.classification("1574227267788data.txt");
     }
 }

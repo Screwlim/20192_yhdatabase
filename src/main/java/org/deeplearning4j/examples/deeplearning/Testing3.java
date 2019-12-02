@@ -1,6 +1,6 @@
 package org.deeplearning4j.examples.deeplearning;
 
-import jdk.nashorn.internal.ir.CallNode;
+
 import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.split.FileSplit;
@@ -31,7 +31,7 @@ public class Testing3 {
         int numLinesToSkip = 0;
         char delimiter = ',';
 
-        String fileName = "testing.txt";
+        String fileName = "./data/testing.txt";
 
         RecordReader recordReader = new CSVRecordReader(numLinesToSkip, delimiter);
         recordReader.initialize(new FileSplit(new ClassPathResource(fileName).getFile()));
