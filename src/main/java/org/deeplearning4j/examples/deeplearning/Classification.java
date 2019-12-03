@@ -78,7 +78,7 @@ public class Classification {
 
         MultiLayerNetwork model;
 
-        String path = "./src/main/resources/trainedModel/attach.zip";
+        String path = "./src/main/resources/trainedModel/1128.zip";
         model = ModelSerializer.restoreMultiLayerNetwork(path);
 
         INDArray output = model.output(allData.getFeatures());

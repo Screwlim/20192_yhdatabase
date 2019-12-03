@@ -23,7 +23,7 @@ public class Service {
             fileName = String.valueOf(time);
             temp = fileName;
             temp2 = temp;
-            fileName = "~/jp/src/main/resources/" + fileName + ".pcap";
+            fileName = "~/20192_yhdatabase/src/main/resources/" + fileName + ".pcap";
             temp = "~/data/" + temp;
 
             File ip = new File("./src/main/resources/" + temp2 + "IP.txt");
@@ -35,11 +35,11 @@ public class Service {
             Thread.sleep(10000);
 
             System.out.println("패킷 특징 추출 시작");
-            command = "~/kdd99_feature_extractor/build-files/src/kdd99extractor -e " + fileName + " > ~/jp/src/main/resources/" + temp2 + ".txt";
+            command = "~/kdd99_feature_extractor/build-files/src/kdd99extractor -e " + fileName + " > ~/20192_yhdatabase/src/main/resources/" + temp2 + ".txt";
             sh.shell(command);
 
             System.out.println("데이터 2열3열 맵핑 + IP주소 파일 생성");
-            command = "python3 ~/mod.py ~/jp/src/main/resources/" + temp2 + ".txt ~/jp/src/main/resources/" + temp2 + "data.txt ~/jp/src/main/resources/" + temp2 + "IP.txt";
+            command = "python3 ~/20192_yhdatabase/mod.py ~/20192_yhdatabase/src/main/resources/" + temp2 + ".txt ~/20192_yhdatabase/src/main/resources/" + temp2 + "data.txt ~/20192_yhdatabase/src/main/resources/" + temp2 + "IP.txt";
             sh.shell(command);
 
             Thread.sleep(1000);
