@@ -45,6 +45,6 @@ KDD-NSL의 데이터의 모든 특징을 유지하고 5개의 라벨로 구분�
 * (Python)
 
 ## 데이터 출처
-* (KDD-NSL)
-* (CSE-CIC - dos)
-
+* NSL-KDD
+* CIC DoS(2017)
+* CSE-CIC-IDS2018 on AWS (https://registry.opendata.aws/cse-cic-ids2018/)
