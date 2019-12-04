@@ -31,23 +31,19 @@ public class Testing3 {
         int numLinesToSkip = 0;
         char delimiter = ',';
 
-        String fileName = "./data/testing.txt";
+        String fileName = "./data/testing.txt"; // 테스트 할 테스트 데이터셋의 경로를 입력합니다. src/resources/ 부터 입력하면 됩니다.
 
         RecordReader recordReader = new CSVRecordReader(numLinesToSkip, delimiter);
         recordReader.initialize(new FileSplit(new ClassPathResource(fileName).getFile()));
+	// 테스트 데이터를 csv형식으로 읽기 위한 선언들 입니다.	
 
-        int labelIndex = 28;
-        int numClasses = 2;
-        int batchSize = 500000;
+        int labelIndex = 28; // label이 몇 열에 있는지에 대한 변수입니다.
+        int numClasses = 2; // label이 몇 개 있는지에 대한 변수입니다.
+        int batchSize = 500000; // testing에는 batch size가 딱히 의미가 없어 그냥 모든데이터를 한번에 테스트 할수있게 큰 값으로 저장했습니다.
 
         DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader, batchSize, labelIndex, numClasses);
         DataSet allData = iterator.next();
-        //allData.shuffle();
-
-        //DataNormalization normalizer = new NormalizerStandardize();
-        //normalizer.fit(allData);
-        //normalizer.transform(allData);
-
+	// 데이터 iterator입니다.        
 
         MultiLayerNetwork model;
 
@@ -59,12 +55,12 @@ public class Testing3 {
         path = path + modelName;
 
         model = ModelSerializer.restoreMultiLayerNetwork(path);
-
+	// 저장된 모델을 불러오는 과정입니다.
 
         Evaluation eval = new Evaluation(2);
         INDArray output = model.output(allData.getFeatures());
         eval.eval(allData.getLabels(), output);
         log.info(eval.stats());
-        //System.out.println("AA" + output);
+        // 테스트 결과를 출력하는 과정입니다.
     }
 }

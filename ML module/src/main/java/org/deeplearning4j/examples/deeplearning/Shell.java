@@ -8,8 +8,7 @@ import java.lang.Process;
 
 public class Shell {
     public static void shell(String args) throws IOException {
-
-        //String temp = "~/kdd99_feature_extractor/build-files/src/kdd99extractor ~/data2.pcap > ~/xx.txt";
+	// linux환경에서 쉘 코드를 실행하기 위한 클래스 입니다. 실행할 command를 매개변수로 받아서 쉘코드를 실행합니다.
         String[] command = {"/bin/sh","-c", args};
 
         try{

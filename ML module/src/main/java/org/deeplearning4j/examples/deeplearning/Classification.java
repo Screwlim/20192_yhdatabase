@@ -59,7 +59,7 @@ public class Classification {
             return;
         }
 
-
+	
 
 
 
@@ -78,29 +78,25 @@ public class Classification {
 
         MultiLayerNetwork model;
 
-        String path = "./src/main/resources/trainedModel/1128.zip";
+        String path = "./src/main/resources/trainedModel/1128.zip"; // 여기서 분류에 사용될 모델의 경로를 입력합니다.
         model = ModelSerializer.restoreMultiLayerNetwork(path);
 
         INDArray output = model.output(allData.getFeatures());
-        //allData.getFeatures();
-        //System.out.println(allData.getFeatures().getDouble(25443,1));
+        
         int i = 0;
         int nNormal=0, nAbnormal=0;
-        while(i < nPacket)
+        while(i < nPacket) // 패킷 하나하나 비교
         {
             if(output.getDouble(i, 0) > output.getDouble(i, 1)) // 정상 패킷
             {
                 System.out.println(i + " : 정상패킷 " + output.getDouble(i, 0) + " " + output.getDouble(i, 1));
                 nNormal++;
             }
-            else // 이상 패킷
+            else // 이상 패킷 이상패킷 이라면 IP파일에서 읽어 공격IP파일에 추가한다.
             {
                 System.out.println(i + " : 이상패킷 " + output.getDouble(i, 0) + " " + output.getDouble(i, 1) + " " + allData.getFeatures().getRow(i));
                 nAbnormal++;
                 line = FileUtils.readLines(file2).get(i);
-                //System.out.println("qqqqqqqqqqqqqqqqqqqqqqqqqqqqq" + line);
-
-                // data/attackIP.txt 에서 search 후 해당 IP가 있다면 count++해주고 없다면 맨밑에 line 1 쓴다.
                 fw.write(line + "\n");
                 fw.flush();
             }
