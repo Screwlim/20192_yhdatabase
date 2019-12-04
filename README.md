@@ -3,6 +3,8 @@
 ![maven badge](https://img.shields.io/badge/maven-%3E%3D3.5.3-red)
 > 본 프로젝트는 [경북대학교](http://knu.ac.kr/wbbs/)와 [(주)YH데이터베이스](http://www.yhdatabase.com/)와의 산학 협력 프로젝트로 진행 되었습니다.
 
+> 본 프로젝트의 모듈은 Apache2.0 라이선스를 따르는 DL4J를 기반으로 작성 되었습니다.
+
 본 프로젝트는 기술의 발달로 다양해지고 변화하는 네트워크 상의 공격에 대응하기 위해 딥러닝 기법을 이용한 새로운 대처 방법을 찾고자 진행 되었습니다. 이를 통해 네트워크 장치의 분석 데이터를 기반으로 한 효율적인 이상 패킷 차단 기술을 확보하고, 그에 따른 적정 자원 할당 및 처리의 방향을 찾아보고자 합니다.
 
 
@@ -19,7 +21,7 @@
 3. git 복사. (경로 설정을 위해 ~$에 설치 하는 것을 권장)
 <pre><code>~$ git clone https://github.com/Screwlim/20192_yhdatabase.git</code></pre>
 
-4. pcap(raw packet) to nsl-kdd 추출 모듈 빌드.
+4. pcap(raw packet) to nsl-kdd 변환 모듈 빌드.
 <pre><code>~$ git clone https://github.com/AI-IDS/kdd99_feature_extractor.git
 ~$ cd kdd99_feature_extractor
 ~/kdd99_feature_extractor$ mkdir build-files
@@ -53,6 +55,11 @@
 <pre>
 DL4J라이브러리를 사용한 신경망 설계 프로젝트 파일
 </pre>
+
+
+## 참고
+* DL4J (http://deeplearning4j.org/)
+* kdd99 형식 추출 모듈 (https://github.com/AI-IDS/kdd99_feature_extractor)
 
 
 ## 깃 프로젝트 참여
