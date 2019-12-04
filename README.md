@@ -10,8 +10,7 @@
 ## 설치
 실행환경 : 우분투 리눅스
 
-1) 
-~$ git clone https://github.com/Screwlim/20192_yhdatabase.git
+1) ~$ git clone https://github.com/Screwlim/20192_yhdatabase.git
 
 의 파일들을 리눅스의 ~/ 디렉토리에 clone 합니다. (경로설정 때문에 꼭 ~/ 디렉토리에 해주세요.)
 
@@ -26,36 +25,26 @@
 
 .pcap 파일(raw packet)에서 nsl-kdd dataset의 특징들을 추출하는 코드입니다.
 
-3)
-itellij를 설치합니다. (maven도 같이 설치합니다.)
+3) itellij를 설치합니다. (maven도 같이 설치합니다.)
 
-4)
-intellij에서 ~/20192_yhdatabase 의 pom.xml을 불러옵니다.
+4) intellij에서 ~/20192_yhdatabase 의 pom.xml을 불러옵니다.
 (import project 클릭 -> ~/20192_yhdatabase/pom.xml 불러오기)
 
-5)
-~/20192_yhdatabase/src/main/java/org/deeplearning4j/examples/deeplearning
-경로에 저희의 코드파일들이 있습니다.
-최종 실시간 패킷을 분류하는 코드파일은
-Service.java, Classification.java, Shell.java
-입니다.
+5) ~/20192_yhdatabase/src/main/java/org/deeplearning4j/examples/deeplearning 경로에 신경망 코드파일들이 있습니다.
+최종 실시간 패킷을 분류하는 코드파일은 Service.java, Classification.java, Shell.java입니다.
 
 저희가 학습한 모델은 
 ~/20192_yhdatabase/src/main/resources/trainedModel 경로에 있습니다. 
-6)
-리눅스에 tcpdump라이브러리가 깔려있는지 확인합니다. (18.04 버전은 기본적으로 설치되어 있습니다.)
 
-7)
-python3가 설치되어있어야 합니다.
+6) 리눅스에 tcpdump라이브러리가 깔려있는지 확인합니다. (18.04 버전은 기본적으로 설치되어 있습니다.)
 
-8)
-Service.java를 열어 IPaddress변수에 자신의 IP주소를 입력합니다.
+7) python3가 설치되어있어야 합니다.
 
-9)
-분류 모델을 바꾸고 싶으면 Classification.java파일의 path변수에서 바꿔주면 됩니다.
+8) Service.java를 열어 IPaddress변수에 자신의 IP주소를 입력합니다.
 
-10)
-Service.java를 실행시키면 실시간 패킷 분류 모듈이 실행됩니다.
+9) 분류 모델을 바꾸고 싶으면 Classification.java파일의 path변수에서 바꿔주면 됩니다.
+
+10) Service.java를 실행시키면 실시간 패킷 분류 모듈이 실행됩니다.
 
 
 ## 파일 정보
@@ -66,23 +55,7 @@ Service.java를 실행시키면 실시간 패킷 분류 모듈이 실행됩니�
 ### src
 <pre>
 DL4J라이브러리를 사용한 신경망 설계 프로젝트 파일
-IntelliJ로 프로젝트를 생성하여 해당 폴터를 import해야함
 </pre>
-
-
-## 라이센스
-* (DL4J, 아파치 2.0.)
-* ()
-
-
-## 소스 정보
-* (DL4J)
-* (CSE-CIC)
-* (AWS -> CSE-CIC 데이터셋 관련)
-
-
-## 이슈
-(내용)
 
 
 ## 크레딧
