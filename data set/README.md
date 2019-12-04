@@ -2,11 +2,11 @@
 
 ## 파일 정보
 
-### /Code/
-### 비정수형 데이터를 정수형 데이터로 변환시켜주는 파이썬 모듈이다.
-### 모든 코드는 KDD-NSL 데이터의 형태로 변환하며 각 파일의 이름은 다음을 의미한다.
-### 2label은 데이터를 normal / abnormal 2가지로 구분하고 5label은 normal / dos / prove / U2R / R2L 로 구분한다.
-### full은 42개의 모든 특징을 이용하고 some은 10 ~ 22번 특징을 제외한 데이터를 사용한다.
+### /Code
+비정수형 데이터를 정수형 데이터로 변환시켜주는 파이썬 모듈이다.
+모든 코드는 KDD-NSL 데이터의 형태로 변환하며 각 파일의 이름은 다음을 의미한다. 
+2label은 데이터를 normal / abnormal 2가지로 구분하고 5label은 normal / dos / prove / U2R / R2L 로 구분한다.
+full은 42개의 모든 특징을 이용하고 some은 10 ~ 22번 특징을 제외한 데이터를 사용한다.
 <pre>
 2label_full_feature_data.py
 2label_some_feature_data_for_linux.py
