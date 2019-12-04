@@ -31,28 +31,23 @@
 
 
 ## 실행
-1. intelliJ에서 ~/20192_yhdatabase 의 pom.xml을 불러오기.
+1. intelliJ에서 ~/20192_yhdatabase/ML module/pom.xml 불러오기.
 
-2. ~/20192_yhdatabase/src/main/java/org/deeplearning4j/examples/deeplearning 경로에 신경망 코드파일들이 있습니다.
-최종 실시간 패킷을 분류하는 코드파일은 Service.java, Classification.java, Shell.java입니다.
+2. ~/20192_yhdatabase/ML module/src/main/java/org/deeplearning4j/examples/deeplearning/Training3.java로 학습.
+학습 완료 된 모델은 ~/20192_yhdatabase/ML module/src/main/resources/trainedModel 경로에 저장.
 
-저희가 학습한 모델은 
-~/20192_yhdatabase/src/main/resources/trainedModel 경로에 있습니다. 
+3. Service.java의 IPaddress 변수에 자신의 IP주소 입력.
 
-3. Service.java를 열어 IPaddress변수에 자신의 IP주소를 입력합니다.
+4. Classification.java의 path 변수에 원하는 분류 모델(또는 학습 한 모델)설정.
 
-4. 분류 모델을 바꾸고 싶으면 Classification.java파일의 path변수에서 바꿔주면 됩니다.
-
-5. Service.java를 실행시키면 실시간 패킷 분류 모듈이 실행됩니다.
-
-[모듈 상세정보](https://github.com/Screwlim/20192_yhdatabase/blob/master/data%20set/README.md)
-
+5. Service.java 실행.
 
 
 ## 파일 정보
-### data_set
+### data_set [(상세정보)](https://github.com/Screwlim/20192_yhdatabase/blob/master/data%20set/README.md)
 <pre>
 신경망을 학습시키고 테스트할 때 사용된 모든 데이터 셋
+
 </pre>
 ### ML module
 <pre>
@@ -60,8 +55,8 @@ DL4J라이브러리를 사용한 신경망 설계 프로젝트 파일
 </pre>
 
 
-## 크레딧
-### 2015114262 임석렬
-### 2014105009 김기윤
-### 2014105106 황석영
-### 2017113020 박효빈
+## 깃 프로젝트 참여
+#### 2015114262 임석렬 [Screwlim](https://github.com/Screwlim)
+#### 2014105009 김기윤 [ko6154](https://github.com/ko6154)
+#### 2014105106 황석영 [tjrdud123](https://github.com/tjrdud123)
+#### 2017113020 박효빈 [Bachbold](https://github.com/Bachbold)
